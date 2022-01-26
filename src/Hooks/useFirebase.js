@@ -36,9 +36,8 @@ const useFirebase = () => {
     setIsLoading(true);
     createUserWithEmailAndPassword(auth, email, password)
       .then((result) => {
-        const newUser = { email, displayName: name }; // name set korte hole state use korte hobe must
-        setUser(newUser); //firebase theke user er name set hoiche
-
+        const newUser = { email, displayName: name };
+        setUser(newUser);
         // userInfoSave(email, name, "POST");
         console.log(result.user);
         setAuthError("");
@@ -49,8 +48,8 @@ const useFirebase = () => {
           .then(() => {})
           .catch((error) => {});
 
-        // const destination = location?.state?.from || "/";
-        // navigate(destination);
+        const destination = location?.state?.from || "/";
+        navigate(destination);
       })
       .catch((error) => {
         setAuthError(error.message);
@@ -85,8 +84,8 @@ const useFirebase = () => {
         // userInfoSave(user.email, user.displayName, "PUT");
         setAuthError("");
         console.log(user);
-        // const path = location?.state?.from || "/";
-        // navigate(path);
+        const path = location?.state?.from || "/";
+        navigate(path);
       })
       .catch((error) => {
         setAuthError(error.message);
