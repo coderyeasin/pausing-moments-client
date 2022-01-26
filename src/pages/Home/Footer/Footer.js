@@ -2,7 +2,7 @@ import React from "react";
 
 const Footer = () => {
   return (
-    <div className="bg-gradient-to-t from-emerald-700 via-emerald-800 py-5 text-justify text-white">
+    <div className="bg-gradient-to-t from-teal-900 via-teal-800 to-teal-900 py-5 text-justify text-white">
       <div className="md:grid md:grid-cols-4 md:my-10 mx-3.5 md:mx-20 md:space-x-10 space-y-10  justify-center">
         <div className="mt-10 mx-5 md:mx-0 space-y-3">
           <h3 className="text-xl text-black font-semibold">Questions?</h3>

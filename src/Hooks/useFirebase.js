@@ -40,7 +40,7 @@ const useFirebase = () => {
         setUser(newUser); //firebase theke user er name set hoiche
 
         // userInfoSave(email, name, "POST");
-
+        console.log(result.user);
         setAuthError("");
         // const user = result.user;
         updateProfile(auth.currentUser, {

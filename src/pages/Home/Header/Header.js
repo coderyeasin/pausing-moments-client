@@ -1,8 +1,12 @@
 import React from "react";
+import useFirebase from "../../../Hooks/useFirebase";
 import logo from "../../../images/logo_pause.png";
+import { FaRegUserCircle } from "react-icons/fa";
 import "./Header.css";
+import { Link } from "react-router-dom";
 
 const Header = () => {
+  const { users, usersLogout } = useFirebase();
   return (
     <div className="md:flex md:justify-around md:items-center md:mt-3">
       <div className="cursor-pointer">
@@ -30,9 +34,23 @@ const Header = () => {
           </li> */}
         </ul>
       </nav>
-      <button className="bg-emerald-700 radius-5px rounded-lg p-3 text-xl text-white ">
-        Sign UP!
-      </button>
+      <div className="flex justify-center items-center">
+        <p>{users?.name}</p>
+        <li className="list-none mx-3 text-2xl">
+          {users?.uid ? (
+            <button
+              onClick={usersLogout}
+              className="bg-teal-700 radius-5px rounded-lg p-3 text-xl text-white "
+            >
+              Logout
+            </button>
+          ) : (
+            <Link to="/login">
+              <FaRegUserCircle className="text-4xl" />
+            </Link>
+          )}
+        </li>
+      </div>
     </div>
   );
 };
