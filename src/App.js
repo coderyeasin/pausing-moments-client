@@ -1,10 +1,19 @@
-import logo from "./logo.svg";
 import "./App.css";
-
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Home from "./pages/Home/Home/Home";
+import Header from "./pages/Home/Header/Header";
+import Footer from "./pages/Home/Footer/Footer";
 function App() {
   return (
     <div className="App">
-      <h1 className="text-7xl font-bold underline">Hello world!</h1>
+      <BrowserRouter>
+        <Header />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/home*" element={<Home />} />
+        </Routes>
+        <Footer />
+      </BrowserRouter>
     </div>
   );
 }

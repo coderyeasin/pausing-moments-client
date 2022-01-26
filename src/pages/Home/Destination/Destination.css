@@ -1,0 +1,26 @@
+.asia {
+  background-image: url("../../../images/village_tour.jpg");
+  height: 300px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  transition: 0.3s;
+}
+
+.africa {
+  background-image: url("../../../images/island_resort.jpg");
+  height: 300px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+.europe {
+  background-image: url("../../../images/miracle_night.jpg");
+  height: 300px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}

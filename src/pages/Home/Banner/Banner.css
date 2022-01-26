@@ -1,0 +1,24 @@
+.first {
+  background-image: url("../../../images/slider/first_cover.jpg");
+  height: calc(100vh - 80px);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+.second {
+  background-image: url("../../../images/slider/second_covers.jpg");
+  height: calc(100vh - 80px);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+.third {
+  background-image: url("../../../images/slider/third_cover.jpg");
+  height: calc(100vh - 80px);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
