@@ -1,0 +1,7 @@
+.register_cover {
+  background-image: url("../../../../images/spceial.jpg");
+  height: 500px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
