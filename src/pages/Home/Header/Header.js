@@ -4,6 +4,7 @@ import logo from "../../../images/logo_pause.png";
 import { FaRegUserCircle } from "react-icons/fa";
 import "./Header.css";
 import { Link } from "react-router-dom";
+import { HashLink } from "react-router-hash-link";
 
 const Header = () => {
   const { users, usersLogout } = useFirebase();
@@ -15,7 +16,7 @@ const Header = () => {
       <nav>
         <ul className="flex md:items-center">
           <li className="px-3 xs:text-xs md:text-2xl">
-            <a href="#">Home</a>
+            <a href="/home">Home</a>
           </li>
           <li className="px-3 xs:text-xs md:text-2xl">
             <a href="#">Features</a>
@@ -29,13 +30,14 @@ const Header = () => {
           <li className="px-3 xs:text-xs md:text-2xl">
             <a href="#">Guide</a>
           </li>
-          {/* <li className="px-3 xs:text-xs md:text-2xl">
-            <a href="#">Posts</a>
-          </li> */}
         </ul>
       </nav>
       <div className="flex justify-center items-center">
-        <p>{users?.name}</p>
+        <Link to="/dashboard">
+          <li className="list-none text-xl">
+            {(users?.uid && users?.displayName) || users?.email}
+          </li>
+        </Link>
         <li className="list-none mx-3 text-2xl">
           {users?.uid ? (
             <button

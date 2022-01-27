@@ -2,6 +2,7 @@ import React from "react";
 import makeCarousel from "react-reveal/makeCarousel";
 import Slide from "react-reveal/Slide";
 import styled, { css } from "styled-components";
+import Typewriter from "typewriter-effect";
 import "./Banner.css";
 
 const Container = styled.div`
@@ -16,50 +17,68 @@ const Carousel = makeCarousel(CarouselUI);
 const Banner = () => {
   return (
     <div>
-      <Carousel defaultWait={3000}>
+      <Carousel defaultWait={5000}>
         <Slide right>
           <div className="first md:flex md:justify-center md:items-center">
-            <div className="bg-blue-900 height-300px pr-3 w-48 bg-opacity-50">
-              <li className="text-2xl text-teal-100 text-right list-none">
-                Latest Blocg
-              </li>
-              <li className="text-2xl text-teal-100 text-right list-none">
-                Latest Blocg
-              </li>
-              <li className="text-2xl text-teal-100 text-right list-none">
-                Latest Blocg
-              </li>
+            <div className="bg-teal-700 height-300px p-3 text-white text-7xl text-center rounded-xl md:w-5/12 bg-opacity-50">
+              <Typewriter
+                onInit={(typewriter) => {
+                  typewriter
+                    .typeString("Couple Tours!")
+                    .callFunction(() => {
+                      console.log("String typed out!");
+                    })
+                    .pauseFor(2500)
+                    .deleteAll()
+                    .callFunction(() => {
+                      console.log("All strings were deleted");
+                    })
+                    .start();
+                }}
+              />
             </div>
           </div>
         </Slide>
         <Slide right>
           <div className="second md:flex md:justify-center md:items-center">
-            <div className="bg-blue-400 height-300px pr-3 w-48 float-right">
-              <li className="text-2xl text-teal-100 text-right list-none">
-                Latest Blocg
-              </li>
-              <li className="text-2xl text-teal-100 text-right list-none">
-                Latest Blocg
-              </li>
-              <li className="text-2xl text-teal-100 text-right list-none">
-                Latest Blocg
-              </li>
+            <div className="bg-teal-700 height-300px p-3 text-white text-7xl text-center rounded-xl md:w-5/12 bg-opacity-50">
+              <Typewriter
+                onInit={(typewriter) => {
+                  typewriter
+                    .typeString("Friends Hangouts!")
+                    .callFunction(() => {
+                      console.log("String typed out!");
+                    })
+                    .pauseFor(2500)
+                    .deleteAll()
+                    .callFunction(() => {
+                      console.log("All strings were deleted");
+                    })
+                    .start();
+                }}
+              />
             </div>
           </div>
         </Slide>
 
         <Slide right>
           <div className="third md:flex md:justify-center md:items-center">
-            <div className="bg-green-900 height-300px pr-3 w-48 float-right">
-              <li className="text-2xl text-teal-100 text-right list-none">
-                Latest Blocg
-              </li>
-              <li className="text-2xl text-teal-100 text-right list-none">
-                Latest Blocg
-              </li>
-              <li className="text-2xl text-teal-100 text-right list-none">
-                Latest Blocg
-              </li>
+            <div className="bg-teal-700 height-300px p-3 text-white text-7xl text-center rounded-xl md:w-5/12 bg-opacity-50">
+              <Typewriter
+                onInit={(typewriter) => {
+                  typewriter
+                    .typeString("Adventure!")
+                    .callFunction(() => {
+                      console.log("String typed out!");
+                    })
+                    .pauseFor(2500)
+                    .deleteAll()
+                    .callFunction(() => {
+                      console.log("All strings were deleted");
+                    })
+                    .start();
+                }}
+              />
             </div>
           </div>
         </Slide>

@@ -7,6 +7,7 @@ import Login from "./pages/Home/Security/Login/Login";
 import Register from "./pages/Home/Security/Register/Register";
 import AuthProvider from "./Context/AuthProvider";
 import AddBlogs from "./pages/Home/Dashboard/Admin/AddBlogs";
+import Dashboard from "./pages/Home/Dashboard/Dashboard/Dashboard";
 function App() {
   return (
     <div className="App">
@@ -19,6 +20,8 @@ function App() {
 
             <Route path="/login" element={<Login />} />
             <Route path="/register" element={<Register />} />
+
+            <Route path="/dashboard" element={<Dashboard />} />
 
             <Route path="/addBlogs" element={<AddBlogs />} />
           </Routes>

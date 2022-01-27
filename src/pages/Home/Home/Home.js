@@ -8,7 +8,7 @@ import Feature from "../Feature/Feature";
 
 const Home = () => {
   return (
-    <div>
+    <div id="home">
       <Banner />
       <Feature />
       <Explore />
