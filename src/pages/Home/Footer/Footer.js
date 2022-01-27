@@ -6,12 +6,13 @@ const Footer = () => {
       <div className="md:grid md:grid-cols-4 md:my-10 mx-3.5 md:mx-20 md:space-x-10 space-y-10  justify-center">
         <div className="mt-10 mx-5 md:mx-0 space-y-3">
           <h3 className="text-xl text-black font-semibold">Questions?</h3>
-          <address>
-            Contact Carmen Escalante Event Planner & Coordinator <br />
-            AED Accredited Event Designer <br />
-            Call 1 (805) 844-3303 <br />
-            Email: Eventbycarmen@gmail.com
-          </address>
+          <ul className="list-unstyled">
+            <li>How Can Travel with Strangers?</li>
+            <li>How Can Travel with Strangers?</li>
+            <li>How Can Travel with Strangers?</li>
+            <li>How Can Travel with Strangers?</li>
+            <li>How Can Travel with Strangers?</li>
+          </ul>
         </div>
         <div className="mx-5 md:mx-0 space-y-3">
           <h3 className="text-xl text-black font-semibold">Location</h3>
@@ -33,7 +34,7 @@ const Footer = () => {
           </p>
         </div>
         <div className="mx-5 md:mx-0 list-none space-y-3">
-          <h3 className="text-xl text-black font-semibold">Event Short List</h3>
+          <h3 className="text-xl text-black font-semibold">Popular Blogs</h3>
           <p className="text-medium">
             {" "}
             We are a one-stop shop focusing on simplifying the event planning
