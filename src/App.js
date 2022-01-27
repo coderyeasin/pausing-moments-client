@@ -10,6 +10,10 @@ import AddBlogs from "./pages/Home/Dashboard/Admin/AddBlogs";
 import Dashboard from "./pages/Home/Dashboard/Dashboard/Dashboard";
 import Post from "./pages/Home/Blogs/Post/Post";
 import PrivateRoute from "./pages/Home/Security/PrivateRoute/PrivateRoute";
+import MakeAdmin from "./pages/Home/Dashboard/Admin/makeAdmin";
+import AllBlogs from "./pages/Home/Dashboard/Admin/AllBlogs";
+import MyBlogs from "./pages/Home/Dashboard/User/MyBlogs";
+import AdminRoute from "./pages/Home/Security/AdminRoute/AdminRoute";
 function App() {
   return (
     <div className="App">
@@ -32,9 +36,38 @@ function App() {
               }
             />
 
-            <Route path="/dashboard" element={<Dashboard />} />
+            <Route path="/dashboard" element={<PrivateRoute>
+              <Dashboard />
+            </PrivateRoute>} >
+            
+              {/* Admin */}
+              <Route path="/dashboard/addBlogs" element={<AdminRoute>
+                <AddBlogs />
+            </AdminRoute>} />
 
-            <Route path="/addBlogs" element={<AddBlogs />} />
+              <Route path="/dashboard/makeAdmin" element={<AdminRoute>
+                <MakeAdmin />
+              </AdminRoute>} />
+              
+              <Route path="/dashboard/allBlogs" element={<AdminRoute>
+                <AllBlogs />
+              </AdminRoute>} />
+              
+             {/* user */}
+              
+              <Route path="/dashboard/myBlogs" element={<PrivateRoute>
+                <MyBlogs />
+              </PrivateRoute>} />
+              <Route path="/dashboard/addBlog" element={<PrivateRoute>
+                <AddBlogs />
+            </PrivateRoute>} />
+              
+            </Route>
+
+
+
+
+           
           </Routes>
           <Footer />
         </BrowserRouter>

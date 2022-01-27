@@ -15,8 +15,7 @@ const Blogs = () => {
       .then((res) => res.json())
       .then((data) => {
         console.log(data);
-        setBlogs(data.reverse());
-        // setPageCount(data);
+        setBlogs(data.filter(e => e.location && e.info && e.cost).reverse());
       });
   }, []);
 
@@ -75,7 +74,7 @@ const Blogs = () => {
 
                   <h3 className="text-3xl"> Price: ${items.cost} </h3>
                   <h5 className="text-normal uppercase">
-                    {items.info.slice(0, 45)}
+                    {items.info}
                   </h5>
                   <p className="text-normal uppercase"> {items.location} </p>
                 </div>

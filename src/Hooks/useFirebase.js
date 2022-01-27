@@ -117,7 +117,7 @@ const useFirebase = () => {
       fetch(`https://enigmatic-savannah-10349.herokuapp.com/users/${users?.email}`)
         .then((res) => res.json())
         .then((data) => {
-          setAdmin(data.admin); // key admin hisebe data asteche tai
+          setAdmin(data.admin); 
         });
     }, [users?.email]);
 

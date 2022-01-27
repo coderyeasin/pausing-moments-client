@@ -23,17 +23,17 @@ const Dashboard = () => {
               </h3>
               <Link
                 className="w-full  flex  items-center space-x-20 text-xl  px-10"
-                to="/dashboard/myOrder"
+                to="/dashboard/addBlog"
               >
-                <FaBeer className="mx-2" /> AddBlogs
+                <FaBeer className="mx-2" /> Add Blog
               </Link>{" "}
               <br />
               <Link
                 className="w-12/12 flex  items-center space-x-20  text-xl px-10"
-                to="/dashboard/review"
+                to="/dashboard/myBlogs"
               >
                 {" "}
-                <FaBeer className="mx-2" /> Review
+                <FaBeer className="mx-2" /> All Blog
               </Link>{" "}
               <br />
               <Link
@@ -90,26 +90,10 @@ const Dashboard = () => {
               <br />
               <Link
                 className="w-12/12 flex  items-center space-x-20  text-xl"
-                to="/dashboard/AllUsers"
+                to="/dashboard/allBlogs"
               >
                 {" "}
                 <FaBeer className="mx-2" /> Manage All users{" "}
-              </Link>{" "}
-              <br />
-              <Link
-                className="w-12/12 flex  items-center space-x-20  text-xl"
-                to="/dashboard/AllEvents"
-              >
-                {" "}
-                <FaBeer className="mx-2" /> Manage All Event{" "}
-              </Link>{" "}
-              <br />
-              <Link
-                className="w-12/12 flex  items-center space-x-20  text-xl"
-                to="/dashboard/ManageAllOrder"
-              >
-                {" "}
-                <FaBeer className="mx-2" /> Manage All Order{" "}
               </Link>{" "}
               <br />
               <Link
@@ -124,7 +108,7 @@ const Dashboard = () => {
                 className="w-12/12 flex  items-center space-x-20  text-xl px-5"
                 to=""
               >
-                {" "}
+                
                 <FaBeer className="mx-2" /> Logout
               </Link>
             </div>
