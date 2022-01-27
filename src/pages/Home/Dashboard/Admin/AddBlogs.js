@@ -8,7 +8,7 @@ const AddBlogs = () => {
 
   const onSubmit = (data) => {
     console.log(data);
-    axios.post("http://localhost:5000/blogs", data).then((res) => {
+    axios.post("https://enigmatic-savannah-10349.herokuapp.com/blogs", data).then((res) => {
       if (res.data.insertedId) {
         alert("added successfully");
         reset();

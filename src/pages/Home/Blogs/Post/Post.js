@@ -11,7 +11,7 @@ const Post = () => {
   const { users } = useAuth();
   const navigate = useNavigate();
   useEffect(() => {
-    fetch("http://localhost:5000/blogs")
+    fetch("https://enigmatic-savannah-10349.herokuapp.com/blogs")
       .then((res) => res.json())
       .then((data) => {
         console.log(data);
@@ -23,19 +23,7 @@ const Post = () => {
   ////////////comment
   const { register, handleSubmit, reset } = useForm();
   const onSubmit = (data) => {
-    // data.status = "pending"; //set intial value
-    // axios.post("http://localhost:5000/comments", data).then((res) => {
-    //   if (res.data.insertedId) {
-    //     Swal.fire(
-    //       `Congrats! Mr.${users?.displayName}`,
-    //       "Received your Booking",
-    //       "success"
-    //     );
-    //     reset();
-    //     navigate("/dashboard");
-    //   }
-    //   console.log(res);
-    // });
+  console.log(data);
   };
 
   return (
