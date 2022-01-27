@@ -8,6 +8,8 @@ import Register from "./pages/Home/Security/Register/Register";
 import AuthProvider from "./Context/AuthProvider";
 import AddBlogs from "./pages/Home/Dashboard/Admin/AddBlogs";
 import Dashboard from "./pages/Home/Dashboard/Dashboard/Dashboard";
+import Post from "./pages/Home/Blogs/Post/Post";
+import PrivateRoute from "./pages/Home/Security/PrivateRoute/PrivateRoute";
 function App() {
   return (
     <div className="App">
@@ -20,6 +22,15 @@ function App() {
 
             <Route path="/login" element={<Login />} />
             <Route path="/register" element={<Register />} />
+
+            <Route
+              path="/posts/:id"
+              element={
+                <PrivateRoute>
+                  <Post />
+                </PrivateRoute>
+              }
+            />
 
             <Route path="/dashboard" element={<Dashboard />} />
 

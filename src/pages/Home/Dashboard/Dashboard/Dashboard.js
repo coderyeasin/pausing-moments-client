@@ -25,7 +25,7 @@ const Dashboard = () => {
                 className="w-full  flex  items-center space-x-20 text-xl  px-10"
                 to="/dashboard/myOrder"
               >
-                <FaBeer className="mx-2" /> Bookings
+                <FaBeer className="mx-2" /> AddBlogs
               </Link>{" "}
               <br />
               <Link
@@ -69,15 +69,15 @@ const Dashboard = () => {
               </Link>
             </div>
           ) : (
-            <div className="w-60 items-center bg-pink-100 p-5 shadow-xl rounded-2xl  text-justify">
+            <div className="w-60 items-center bg-teal-100 p-5 shadow-xl rounded-2xl  text-justify">
               <h3 className="text-center text-xl py-5">
                 {users?.displayName} Panel
               </h3>
               <Link
                 className="w-full  flex  items-center space-x-20 text-xl  px-5"
-                to="/dashboard/addEvents"
+                to="/dashboard/addBlog"
               >
-                <FaBeer className="mx-2" /> Add Events
+                <FaBeer className="mx-2" /> Add Blog
               </Link>{" "}
               <br />
               <Link

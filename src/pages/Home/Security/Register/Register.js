@@ -39,20 +39,20 @@ const Register = () => {
   };
 
   return (
-    <div className=" register_cover">
-      {/* {isLoading && ( */}
+    <div className="flex justify-center items-center register_cover">
+      {isLoading && (
       <div className="flex justify-center items-center mb-5">
         <div className="animate-spin rounded-full h-32 w-32 border-b-2 border-green-900"></div>
       </div>
-      {/* )} */}
+      )}
 
       <div className="md:flex justify-evenly gap-4 items-center">
-        <div className="md:w-1/4 ">
+        <div className="md:w-3/4 ">
           <img src={signupImage} alt="reg_img" />
         </div>
 
         <div className="md:w-2/4 bg-teal-700 bg-opacity-80">
-          {/* {!isLoading && ( */}
+          {!isLoading && (
           <form onSubmit={handleSubmit(onSubmit)} className=" space-y-3">
             <input
               type="text"
@@ -86,7 +86,7 @@ const Register = () => {
               value="Register"
             />
           </form>
-          {/* )} */}
+          )}
           <Link
             to="/login"
             className="text-white text-xl block text-center mt-3"

@@ -16,7 +16,7 @@ const Header = () => {
       <nav>
         <ul className="flex md:items-center">
           <li className="px-3 xs:text-xs md:text-2xl">
-            <a href="/home">Home</a>
+            <Link to="/home"><a href="#">Home</a></Link>
           </li>
           <li className="px-3 xs:text-xs md:text-2xl">
             <a href="#">Features</a>
@@ -42,7 +42,7 @@ const Header = () => {
           {users?.uid ? (
             <button
               onClick={usersLogout}
-              className="bg-teal-700 radius-5px rounded-lg p-3 text-xl text-white "
+              className="bg-emerald-700 radius-5px rounded-lg p-3 text-xl text-white "
             >
               Logout
             </button>

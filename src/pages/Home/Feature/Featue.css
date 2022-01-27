@@ -1,7 +1,7 @@
 .feature_bg {
   border-radius: 50px;
-  background: hsl(225, 100%, 99%);
-  box-shadow: 12px 12px 24px #ebecf1, -12px -12px 24px #eff1f3;
+  background: #159363;
+  box-shadow: 12px 12px 24px #15744f, -12px -12px 24px #058f5a;
   position: absolute;
 }
 .types {

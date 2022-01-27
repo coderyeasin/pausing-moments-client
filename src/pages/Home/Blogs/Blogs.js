@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 import Rating from "react-rating";
 import { Link } from "react-router-dom";
 import useAuth from "../../../Hooks/useAuth";
-import "./Blogs.css";
 
 const Blogs = () => {
   const [blogs, setBlogs] = useState([]);
@@ -54,7 +53,7 @@ const Blogs = () => {
                 src={items.image}
                 alt=""
               />
-              <Link to={`/explore/${items._id}`}>
+              <Link to={`/posts/${items._id}`}>
                 <button className="text-xl text-teal-800 border-2 px-5 py-3 mb-5 border-emerald-800 rounded-lg hover:text-emerald-100 hover:bg-teal-900">
                   Details
                 </button>
