@@ -1,0 +1,5 @@
+.pagination .selected:focus {
+  width: 100%;
+  background-color: rgb(56, 56, 248);
+  color: white;
+}
