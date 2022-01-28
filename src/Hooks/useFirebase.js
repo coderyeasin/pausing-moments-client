@@ -113,13 +113,15 @@ const useFirebase = () => {
 
   ////////////////////////////////
   //admin checking
-    useEffect(() => {
-      fetch(`http://localhost:5000/users/${users?.email}`)
-        .then((res) => res.json())
-        .then((data) => {
-          setAdmin(data.admin); 
-        });
-    }, [users?.email]);
+  useEffect(() => {
+    fetch(
+      `https://enigmatic-savannah-10349.herokuapp.com/users/${users?.email}`
+    )
+      .then((res) => res.json())
+      .then((data) => {
+        setAdmin(data.admin);
+      });
+  }, [users?.email]);
 
   ///////////////////////////////////
   //signOut
@@ -133,15 +135,17 @@ const useFirebase = () => {
   };
 
   ///////////////user info save to db
-    const userInfoSave = (email, displayName) => {
-      let user = { email, displayName };
-      axios.post("http://localhost:5000/users", user).then((res) => {
+  const userInfoSave = (email, displayName) => {
+    let user = { email, displayName };
+    axios
+      .post("https://enigmatic-savannah-10349.herokuapp.com/users", user)
+      .then((res) => {
         if (res.data.insertedId) {
           Swal.fire(`Congratulations!`, "Successfully Created!", "success");
         }
         console.log(res);
       });
-    };
+  };
 
   //////////////////////////////////
   // Authentication send
