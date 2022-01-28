@@ -7,6 +7,8 @@ const AddBlogs = () => {
   const { register, handleSubmit, reset } = useForm();
 
   const onSubmit = (data) => {
+    data.status = "pending"
+    
     console.log(data);
     axios.post("https://enigmatic-savannah-10349.herokuapp.com/blogs", data).then((res) => {
       if (res.data.insertedId) {

@@ -14,6 +14,7 @@ import MakeAdmin from "./pages/Home/Dashboard/Admin/makeAdmin";
 import AllBlogs from "./pages/Home/Dashboard/Admin/AllBlogs";
 import MyBlogs from "./pages/Home/Dashboard/User/MyBlogs";
 import AdminRoute from "./pages/Home/Security/AdminRoute/AdminRoute";
+import UpdateBlogs from "./pages/Home/Dashboard/Admin/UpdateBlogs";
 function App() {
   return (
     <div className="App">
@@ -51,6 +52,10 @@ function App() {
               
               <Route path="/dashboard/allBlogs" element={<AdminRoute>
                 <AllBlogs />
+              </AdminRoute>} />
+
+              <Route path="/dashboard/updateOrders/:id" element={<AdminRoute>
+                <UpdateBlogs />
               </AdminRoute>} />
               
              {/* user */}
