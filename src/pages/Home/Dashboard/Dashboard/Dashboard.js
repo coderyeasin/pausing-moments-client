@@ -33,7 +33,7 @@ const Dashboard = () => {
                 to="/dashboard/myBlogs"
               >
                 {" "}
-                <FaBeer className="mx-2" /> All Blog
+                <FaBeer className="mx-2" /> My Blog
               </Link>{" "}
               <br />
               <Link
@@ -93,7 +93,7 @@ const Dashboard = () => {
                 to="/dashboard/allBlogs"
               >
                 {" "}
-                <FaBeer className="mx-2" /> Manage All users{" "}
+                <FaBeer className="mx-2" /> All Blogs{" "}
               </Link>{" "}
               <br />
               <Link

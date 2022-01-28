@@ -1,15 +1,15 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
-import useAuth from '../../../../Hooks/useAuth';
+
 
 const MyBlogs = () => {
     return (
         <div>
-        <h3 className="text-4xl uppercase font-semibold">Booking Events :  </h3>
+        <h3 className="text-4xl uppercase font-semibold">My Blogs :  </h3>
        
         <table className="table-auto w-full" >
                     <thead>
-                        <tr className="bg-pink-700 border-2 border-pink-900">
+                        <tr className="bg-teal-700 border-2 border-emerald-900">
                         <th>Date</th>
                         <th>Title</th>
                         <th>Email</th>

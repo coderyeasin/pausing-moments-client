@@ -2,16 +2,15 @@ import React from "react";
 import { useForm } from "react-hook-form";
 import { useLocation, useNavigate } from "react-router";
 import { Link } from "react-router-dom";
-import useFirebase from "../../../../Hooks/useFirebase";
-// import useAuth from '../../../Hooks/useAuth';
 import signupImage from "../../../../images/airport.jpg";
 import Swal from "sweetalert2";
 
 import "./Register.css";
+import useAuth from "../../../../Hooks/useAuth";
 
 const Register = () => {
-  // const { users, googleLoginUsers, createNewUser, isLoading } = useAuth();
-  const { users, googleLoginUsers, createNewUser, isLoading } = useFirebase();
+  const { users, googleLoginUsers, createNewUser, isLoading } = useAuth();
+
   //modal
   const navigate = useNavigate();
   const location = useLocation();

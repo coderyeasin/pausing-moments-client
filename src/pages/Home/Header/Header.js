@@ -32,7 +32,7 @@ const Header = () => {
           </li>
         </ul>
       </nav>
-      <div className="flex justify-center items-center">
+      <div className="md:flex justify-center items-center">
         <Link to="/dashboard">
           <li className="list-none text-xl">
             {(users?.uid && users?.displayName) || users?.email}
@@ -42,7 +42,7 @@ const Header = () => {
           {users?.uid ? (
             <button
               onClick={usersLogout}
-              className="bg-emerald-700 radius-5px rounded-lg p-3 text-xl text-white "
+              className="rounded-lg cursor-pointer bg-transparent outline-none border-b-2 py-2 px-4 bg-teal-500 text-xl text-white transform duration-500 hover:scale-95"
             >
               Logout
             </button>

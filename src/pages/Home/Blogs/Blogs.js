@@ -44,7 +44,7 @@ const Blogs = () => {
         <div className=" md:flex flex-wrap gap-5 mx-10">
           {currentPost.map((items) => (
             <div
-              className="bg-teal-50 md:w-3/4 mx-auto pt-3 text-center shadow-xl rounded-2xl relative"
+              className="bg-teal-100 md:w-3/4 mx-auto pt-3 text-center shadow-xl rounded-2xl relative"
               key={items._id}
             >
               <img
@@ -53,17 +53,17 @@ const Blogs = () => {
                 alt=""
               />
               <Link to={`/posts/${items._id}`}>
-                <button className="text-xl text-teal-800 border-2 px-5 py-3 mb-5 border-emerald-800 rounded-lg hover:text-emerald-100 hover:bg-teal-900">
+                <button className="text-xl text-teal-500 border-2 px-5 py-3 mb-5 border-teal-500 rounded-lg hover:text-emerald-100 hover:bg-teal-500">
                   Details
                 </button>
               </Link>
               <div className="md:flex justify-evenly items-center gap-4">
-                <div className="absolute md:w-4/12 rounded-r-lg bottom-0 left-0 right-0 top-20 font-bold text-emerald-900 bg-teal-50 bg-opacity-70 md:h-32 py-3 space-y-3 my-10">
+                <div className="absolute md:w-4/12 rounded-r-lg bottom-0 left-0 right-0 top-20 font-bold text-emerald-900 bg-teal-50 bg-opacity-70 md:h-48 py-3 space-y-3 my-10">
                   <h3 className="text-3xl"> {items.title} </h3>
                   <h5 className="text-normal">Posted Date: {items.posted}</h5>
                 </div>
 
-                <div className="absolute md:w-4/12 rounded-l-lg bottom-0 left-250 right-0 top-20 font-bold text-emerald-900 bg-teal-50 bg-opacity-70 md:h-48 my-10 space-y-3">
+                <div className="absolute md:w-4/12 rounded-l-lg bottom-0 left-250 right-0 top-10 font-bold text-teal-500 bg-teal-50 bg-opacity-70 my-10 space-y-3">
                   <Rating
                     readonly
                     initialRating={items?.rating}
@@ -73,6 +73,7 @@ const Blogs = () => {
                   />
 
                   <h3 className="text-3xl"> Price: ${items.cost} </h3>
+                  <h3 className="text-3xl"> Expensive: {items.expense || 'High'} </h3>
                   <h5 className="text-normal uppercase">
                     {items.info}
                   </h5>

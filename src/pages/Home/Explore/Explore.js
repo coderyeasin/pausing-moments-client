@@ -13,7 +13,7 @@ const Explore = () => {
           dignissimos quae saepe, nihil neque! Ipsa eveniet eum voluptatem
           distinctio architecto id fugit ratione.
         </p>
-        <button className="bg-emerald-700 rounded-lg p-3 text-xl text-white">
+        <button className="rounded-lg cursor-pointer bg-transparent outline-none border-b-2 py-2 px-4 bg-teal-500 text-xl text-white transform duration-500 hover:scale-95">
           Guide Plan
         </button>
       </div>

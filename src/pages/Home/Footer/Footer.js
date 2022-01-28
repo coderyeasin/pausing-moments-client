@@ -2,7 +2,7 @@ import React from "react";
 
 const Footer = () => {
   return (
-    <div className="bg-gradient-to-t from-teal-900 via-teal-800 to-teal-900 py-5 text-justify text-white">
+    <div className="bg-gradient-to-t from-teal-500 via-teal-600 to-teal-700 py-5 text-justify text-white">
       <div className="md:grid md:grid-cols-4 md:my-10 mx-3.5 md:mx-20 md:space-x-10 space-y-10  justify-center">
         <div className="mt-10 mx-5 md:mx-0 space-y-3">
           <h3 className="text-xl text-black font-semibold">Questions?</h3>
@@ -16,7 +16,7 @@ const Footer = () => {
         </div>
         <div className="mx-5 md:mx-0 space-y-3">
           <h3 className="text-xl text-black font-semibold">Location</h3>
-          <address>
+          <address className="">
             A Perfect Event By Carmen Company
             <br />
             323 Bedford Place <br />
@@ -40,13 +40,11 @@ const Footer = () => {
             We are a one-stop shop focusing on simplifying the event planning
             process for you and your loved ones.
           </p>
-          <li>Catering </li>
-          <li>Floral Decor</li>
+          <li>Europe Tour </li>
+          <li>Niagra Falls</li>
           <li>Cake and Candy Buffet Services</li>
-          <li>Party Rentals</li>
-          <li>transportation</li>
-          <li>DJ, Lighting,</li>
-          <li>Photo and Video.</li>
+          <li>Road Trips</li>
+          <li>Private Island</li>
         </div>
       </div>
     </div>

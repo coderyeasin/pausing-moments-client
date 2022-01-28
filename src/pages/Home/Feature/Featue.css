@@ -1,13 +1,13 @@
 .feature_bg {
   border-radius: 50px;
-  background: #159363;
-  box-shadow: 12px 12px 24px #15744f, -12px -12px 24px #058f5a;
+  background: #4ab9a7;
+  box-shadow: 12px 12px 24px #2a9b88, -12px -12px 24px #edf5f3;
   position: absolute;
 }
 .types {
   /* border-radius: 50px; */
   background: hsl(225, 100%, 99%);
-  box-shadow: 12px 12px 24px #ebecf1, -12px -12px 24px #eff1f3;
+  box-shadow: 12px 12px 24px #4ab9a7, -12px -12px 24px #eff1f3;
 }
 
 @media only screen and (max-width: 570px) {

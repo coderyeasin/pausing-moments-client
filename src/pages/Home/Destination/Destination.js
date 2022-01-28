@@ -15,17 +15,17 @@ const Destination = () => {
 
       <div className="md:flex justify-center items-center gap-3 my-12">
         <div className="asia md:w-1/4 h-100 transform hover:scale-105 duration-500">
-          <h3 className="text-5xl text-right bg-emerald-700 p-1 w-40 float-right transform hover:scale-105 duration-500 text-gray-300 cursor-pointer">
+          <h3 className="text-5xl text-right bg-teal-500 p-1 w-40 float-right transform hover:scale-105 duration-500 text-gray-300 cursor-pointer">
             Asia
           </h3>
         </div>
         <div className="africa md:w-1/4 h-100 transform hover:scale-105 duration-500">
-          <h3 className="text-5xl text-right bg-emerald-700 p-1 w-40 float-right transform hover:scale-105 duration-500 text-gray-300 cursor-pointer">
+          <h3 className="text-5xl text-right bg-teal-500 p-1 w-40 float-right transform hover:scale-105 duration-500 text-gray-300 cursor-pointer">
             Africa
           </h3>
         </div>
         <div className="europe md:w-1/4 h-100 transform hover:scale-105 duration-500">
-          <h3 className="text-5xl text-right bg-emerald-700 p-1 w-40 float-right transform hover:scale-105 duration-500 text-gray-300 cursor-pointer">
+          <h3 className="text-5xl text-right bg-teal-500 p-1 w-40 float-right transform hover:scale-105 duration-500 text-gray-300 cursor-pointer">
             Europe
           </h3>
         </div>
