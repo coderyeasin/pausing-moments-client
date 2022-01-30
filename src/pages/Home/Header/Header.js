@@ -16,7 +16,9 @@ const Header = () => {
       <nav>
         <ul className="flex md:items-center">
           <li className="px-3 xs:text-xs md:text-2xl">
-            <Link to="/home"><a href="#">Home</a></Link>
+            <Link to="/home">
+              <a href="#">Home</a>
+            </Link>
           </li>
           <li className="px-3 xs:text-xs md:text-2xl">
             <a href="#">Features</a>
@@ -42,7 +44,7 @@ const Header = () => {
           {users?.uid ? (
             <button
               onClick={usersLogout}
-              className="rounded-lg cursor-pointer bg-transparent outline-none border-b-2 py-2 px-4 bg-teal-500 text-xl text-white transform duration-500 hover:scale-95"
+              className="rounded-lg cursor-pointer outline-none border-b-2 py-2 px-4 bg-teal-500 text-xl text-white transform duration-500 hover:scale-95"
             >
               Logout
             </button>

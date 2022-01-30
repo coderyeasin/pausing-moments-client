@@ -56,13 +56,13 @@ const Login = () => {
             className="md:w-3/4 space-y-3 "
           >
             <input
-              className="block w-full bg-transparent outline-none border-b-2 py-2 px-4  placeholder-teal-500 focus:bg-teal-600"
+              className="block w-full bg-transparent outline-none border-b-2 py-2 px-4 text-teal-500 placeholder-teal-500 focus:bg-teal-600"
               type="email"
               placeholder="Email"
               {...register("email")}
             />
             <input
-              className="block w-full bg-transparent outline-none border-b-2 py-2 px-4  placeholder-teal-500 focus:bg-teal-600"
+              className="block w-full bg-transparent outline-none border-b-2 py-2 px-4 text-teal-500 placeholder-teal-500 focus:bg-teal-600"
               type="password"
               placeholder="Password"
               {...register("password")}

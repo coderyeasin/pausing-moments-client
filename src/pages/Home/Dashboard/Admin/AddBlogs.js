@@ -2,21 +2,27 @@ import React from "react";
 import axios from "axios";
 import { useForm } from "react-hook-form";
 import back from "../../../../images/village_tour.jpg";
+import useAuth from "../../../../Hooks/useAuth";
+import "./AddBlog.css";
 
 const AddBlogs = () => {
   const { register, handleSubmit, reset } = useForm();
+  const { users } = useAuth();
 
   const onSubmit = (data) => {
-    data.status = "pending"
-    
+    data.status = "pending";
+    data.email = `${users.email}`;
+
     console.log(data);
-    axios.post("https://enigmatic-savannah-10349.herokuapp.com/blogs", data).then((res) => {
-      if (res.data.insertedId) {
-        alert("added successfully");
-        reset();
-      }
-      console.log(res);
-    });
+    axios
+      .post("https://enigmatic-savannah-10349.herokuapp.com/blogs", data)
+      .then((res) => {
+        if (res.data.insertedId) {
+          alert("added successfully");
+          reset();
+        }
+        console.log(res);
+      });
   };
 
   return (
@@ -43,7 +49,7 @@ const AddBlogs = () => {
               className="w-3/4 bg-transparent outline-none border-b-2 py-2 px-4  placeholder-teal-500 focus:bg-teal-600"
               {...register("info", { required: true })}
             />
-            
+
             <input
               placeholder="Travel Time"
               type="date"
@@ -75,7 +81,7 @@ const AddBlogs = () => {
               {...register("rating")}
             />
             <input
-              placeholder="Date"
+              placeholder="Posted Date"
               type="date"
               className="w-3/4 bg-transparent outline-none border-b-2 py-2 px-4 text-teal-500 placeholder-teal-500 focus:bg-teal-600"
               {...register("posted", { required: true })}
@@ -127,7 +133,7 @@ const AddBlogs = () => {
             <br />
             <input
               placeholder=""
-              className="md:w-1/4 -lg cursoroundedr-pointer bg-transparent outline-none border-b-2 py-2 px-4 bg-teal-500 text-xl text-white transform duration-500 hover:scale-95"
+              className="md:w-1/4 cursor-pointer rounded-lg outline-none border-b-2 py-2 px-4 bg-teal-500 text-xl text-white transform duration-500 hover:scale-95"
               type="submit"
               value="Add Blogs"
             />
